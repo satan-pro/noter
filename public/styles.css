@@ -13,7 +13,7 @@ body{
     font-family: 'Figtree', sans-serif;
     width: 100%;
     height: 100vh;
-    background-color: rgba(23, 23, 23, 1);
+    background-color: #212529;
     color: whitesmoke;
    
 }
@@ -29,7 +29,7 @@ nav{
     position: sticky;
     left: 0;
     top: 0;
-    background-color: rgba(23, 23, 23, 0.678);
+    background-color: #212529;
     border-bottom: 0.25px solid rgb(83, 83, 83);
 }
 
@@ -58,11 +58,34 @@ a:any-link{
 main{
     display: flex;
     justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
 
 main .sidebar{
     flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-left: 20px;
+    background-color: #343a40;
+    height: 100%;
 }
+
+main .sidebar svg{
+    height: 2rem;
+    width: 2rem;
+    stroke-width: 1px;
+}
+
+main .sidebar .sidebar-options{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 400;
+}
+
 main .notes{
     flex-basis: 25%;
 }
@@ -70,3 +93,7 @@ main .notes{
 main .extras{
     flex-basis: 25%;
 }
+
+/* Convert the navbar to position fixed
+Add padding top to the body 
+Make the 3 sections of height 100% */
