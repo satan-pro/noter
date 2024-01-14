@@ -7,9 +7,9 @@ sidebarButton.addEventListener('click', function(){
     {
         sidebarText[i].classList.toggle('no-text');
 
-        if(sidebarOptions[i].classList.contains('first-child'))
+        if(sidebarOptions[i].classList.contains('option-selected'))
         {
-            sidebarOptions[i].classList.remove('first-child');
+            sidebarOptions[i].classList.toggle('first-child');
         }
     }
 });

@@ -75,6 +75,7 @@ main .sidebar .first-child{
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     color: white;
+    transition: 0.3s;
    
 }
 
@@ -83,10 +84,12 @@ main .sidebar .sidebar-options .sidebar-options-logo{
     width: 48px;
     border-radius: 50%;
     padding: 0 10px 0 10px;
+    transition:0.3s;
 }
 
-main .sidebar .sidebar-options .selected{
+main .sidebar .sidebar-options .logo-selected{
     background-color: #030303;
+    transition: 0.3s;
 }
 
 main .sidebar svg{
@@ -124,10 +127,12 @@ main .sidebar .sidebar-options{
 
 main .sidebar .sidebar-options .sidebar-text{
     display: block;
+    transition: 0.3s;
 }
 
 main .sidebar .sidebar-options .no-text{
     display: none;
+    transition: 0.3s;
 }
 
 main .notes{
@@ -149,16 +154,20 @@ main .notes .headline h3{
 
 main .notes .content-cards{
     display: grid;
-    grid-template-columns: repeat(2, 300px);
-    grid-auto-rows: auto;
-    row-gap: 20px;
+    gap: 20px 20px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 150px;
+    
 }
 
 main .notes .content-cards .card{
     max-width: 275px;
+    height: minmax(100px, 200px);
+    line-height: 1.4rem;
     border-radius: 20px;
     background-color: #030303;
     padding: 20px;
+    
 }
 
 main .notes .content-cards .card h4{
@@ -168,11 +177,105 @@ main .notes .content-cards .card h4{
 
 main .notes .content-cards .card p{
     font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 main .extras{
     flex-basis: 25%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
+
+main .extras .search-box{
+    display: flex;
+    width: 250px;
+    height: auto;
+    background-color: #e9ecef;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+main .extras .search-box svg{
+    height: 20px;
+    width: 20px;
+    color: #343a40;
+    margin-right: 10px;
+}
+
+main .extras .search-box input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Figtree', sans-serif;
+}
+
+.extras .calendar{
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #030303;
+    color: #e9ecef;
+    align-items: center;
+    gap: 15px;
+}
+
+.extras .calendar-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+}
+
+.extras .calendar-header .current-month{
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.exras .current-month svg{
+    width: 25px;
+    height: 25px;
+    margin-inline:5px;
+}
+
+.extras .calendar-days{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.extras .calendar-days .weeks{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(7,30px);
+    gap: 5px 8px;
+    font-weight: bold;
+}
+
+.extras .calendar-days .days{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 5px 8px;
+    text-align: center;
+}
+
+
+
 
 /* Convert the navbar to position fixed
 Add padding top to the body 
