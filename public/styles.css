@@ -246,7 +246,7 @@ main .extras .search-box input{
     text-align: center;
 }
 
-.exras .current-month svg{
+.extras .calendar-header svg{
     width: 25px;
     height: 25px;
     margin-inline:5px;
