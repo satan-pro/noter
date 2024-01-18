@@ -258,7 +258,7 @@ main .extras .search-box input{
     gap: 5px;
 }
 
-.extras .calendar-days .weeks{
+.extras .calendar-days .weekdays{
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(7,30px);
@@ -277,6 +277,3 @@ main .extras .search-box input{
 
 
 
-/* Convert the navbar to position fixed
-Add padding top to the body 
-Make the 3 sections of height 100% */
