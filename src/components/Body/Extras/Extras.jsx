@@ -1,12 +1,12 @@
 import React from "react";
 import SearchBox from "../SearchBox";
-import Calendar from "./Calendar";
+import CustomCalendar from "./CustomCalendar";
 
 function Extras() {
   return (
     <div class="extras">
       <SearchBox />
-      <Calendar />
+      <CustomCalendar />
     </div>
   );
 }

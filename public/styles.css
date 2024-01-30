@@ -136,12 +136,49 @@ main .sidebar .sidebar-options .no-text{
 }
 
 main .notes{
-    padding-top: 80px;
+    padding-top: 30px;
     flex-basis: 40%;
    /*  max-width: 670px; */
     display: flex;
     flex-direction: column;
     gap: 50px;
+}
+
+main .notes .input-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #171717;
+    padding: 10px 0 10px 0;
+    padding-inline: 30px;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.1px solid #e9ecef;
+    border-radius: 10px;
+}
+
+main .notes .input-box input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 75%;
+    font-family: 'Figtree', sans-serif;
+    color: #e9ecef;
+    font-size: 1rem;
+}
+
+main .notes .input-box .input-box-button{
+    background-color: transparent;
+    border: none;
+    color: #e9ecef;
+    display: flex;
+    align-items: center;
+}
+
+main .notes .input-box .input-box-button svg{
+    height: 25px;
+    width: 25px;
+    color: #e9ecef;
 }
 
 main .notes .headline h1{

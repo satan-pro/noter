@@ -9,7 +9,7 @@ function Sidebar()
         <div className="sidebar">
           <SidebarButton />
           {icons.map((icon)=>{
-            return icon.key>1?<SidebarOptions icon={icon} />:null;
+            return icon.key>1&&icon.key<6?<SidebarOptions icon={icon} />:null;
           })}
           </div>
 

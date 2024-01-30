@@ -1,11 +1,21 @@
 import React from "react";
 import icons from "../../../data/icons";
 import Icon from "../Icon";
+import {monthLong, year} from "../../../data/date";
 
-function Calendar() {
+/* const onPanelChange = (value, mode)=>{
+  console.log(value.format('YYYY-MM-DD'), mode);
+}; */
+
+function CustomCalendar() {
 
     const weekdays=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const days = [...Array(31).keys()];
+   /*  const {token} = theme.useToken();
+    const wrapperStyle = {
+      border: `1px solid ${token.colorBorderSecondary}`,
+      borderRadius: token.borderRadiusLG,
+    }; */
 
   return (
     <div class="calendar">
@@ -14,7 +24,7 @@ function Calendar() {
           {icons.map((icon) => {
             return icon.name === "LeftArrow" ? <Icon icon={icon} /> : null;
           })}
-          <div class="current-month">January 2024</div>
+          <div class="current-month">{`${monthLong} ${year}`}</div>
           {icons.map((icon) => {
             return icon.name === "RightArrow" ? <Icon icon={icon} /> : null;
           })}
@@ -32,8 +42,9 @@ function Calendar() {
           })}
         </ul>
       </div>
+
     </div>
   );
 }
 
-export default Calendar;
+export default CustomCalendar;
