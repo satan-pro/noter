@@ -36,11 +36,14 @@ function Notes() {
     <div class="notes">
       <div className="input-box">
         <input type="text" name="notesInput" placeholder="Title" value={title} onChange={titleChange}/>
-        <button className="input-box-button">
-          <Fab color="success" aria-label="add" size="small" onClick={handleClick}>
-            <AddIcon />
-          </Fab>
-        </button>
+        <textarea placeholder="Type your note" />
+        <div className="input-button-area">
+          
+            <Fab color="success" aria-label="add" size="small" onClick={handleClick}>
+                <AddIcon />
+              </Fab>
+         
+        </div>
       </div>
       <div class="headline">
         <h1>Today's Schedule</h1>

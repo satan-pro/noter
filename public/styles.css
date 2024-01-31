@@ -148,13 +148,15 @@ main .notes .input-box{
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     background-color: #171717;
     padding: 10px 0 10px 0;
     padding-inline: 30px;
-    align-items: center;
+    align-items:flex-start;
     justify-content: space-between;
     border: 0.1px solid #e9ecef;
     border-radius: 10px;
+    position: relative;
 }
 
 main .notes .input-box input{
@@ -165,14 +167,30 @@ main .notes .input-box input{
     font-family: 'Figtree', sans-serif;
     color: #e9ecef;
     font-size: 1rem;
+    margin: 0 0 10px 0;
 }
 
-main .notes .input-box .input-box-button{
+main .notes .input-box textarea{
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Figtree', sans-serif;
+    color: #e9ecef;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+main .notes .input-box .input-button-area{
     background-color: transparent;
     border: none;
     color: #e9ecef;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
 }
 
 main .notes .input-box .input-box-button svg{
