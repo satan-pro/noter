@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import icons from "../../../data/icons";
 import Icon from "../Icon";
 import {monthLong, year} from "../../../data/date";
+import Calendar from 'react-calendar';
 
 /* const onPanelChange = (value, mode)=>{
   console.log(value.format('YYYY-MM-DD'), mode);
@@ -17,9 +18,11 @@ function CustomCalendar() {
       borderRadius: token.borderRadiusLG,
     }; */
 
+    const [date, setDate] = useState(new Date());
+
   return (
     <div class="calendar">
-      <header>
+     {/*  <header>
         <div class="calendar-header">
           {icons.map((icon) => {
             return icon.name === "LeftArrow" ? <Icon icon={icon} /> : null;
@@ -41,8 +44,8 @@ function CustomCalendar() {
             return <li>{day}</li>
           })}
         </ul>
-      </div>
-
+      </div> */}
+      <Calendar onChange={setDate} value={date} />
     </div>
   );
 }
